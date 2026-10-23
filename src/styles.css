@@ -1,0 +1,235 @@
+/* =====================
+   RESET & BASE
+   ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #111;
+  background: #fff;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   NAVBAR
+   ===================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+}
+
+.logo-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.logo-tagline {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  padding: 0.4rem 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.9rem;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background: #f0f0f0;
+}
+.nav-btn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* =====================
+   HOME — HERO
+   ===================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 3rem 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+.hero-image {
+  width: 40vw;
+  height: 50vh;
+
+  background-image: url(../assets/Screenshot_20260505_205109-1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+}
+
+/* =====================
+   MENU
+   ===================== */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  
+  padding: 3rem 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.menu-category h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.item-name {
+  color: #333;
+}
+.item-price {
+  font-weight: 500;
+}
+
+.menu-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* =====================
+   CONTACT
+   ===================== */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  padding: 3rem 2rem;
+}
+
+.contact-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-illustration {
+  width: 50vw;
+  height: 50vh;
+
+  background-image: url(../assets/shop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+}
