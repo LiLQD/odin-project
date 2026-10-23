@@ -1,0 +1,308 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.heading {
+    height: 5rem;
+    background-color: #ebedf5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    justify-items: center;
+
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 10% 1fr;
+}
+
+#add-btn {
+    grid-column: 2;
+    margin-top: 2rem;
+    height: 3rem;
+    width: 15rem;
+
+    appearance: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    background-color: #0f5ac7;
+    color: white;
+
+    border-radius: 5px;
+    border: solid black 1px;
+    cursor: pointer;
+}
+
+#add-dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 25%;
+    height: 40%;
+}
+
+#add-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.title-form>input,
+.author-form>input,
+.pages-form>input {
+    appearance: none;
+    box-shadow: inset 1px 1px 3px #cccccc;
+    height: 1.5rem;
+    width: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.dialog-buttons {
+    display: flex;
+    gap: 3rem;
+}
+
+.dialog-buttons>* {
+    appearance: none;
+    cursor: pointer;
+
+    width: 6rem;
+    height: 2.5rem;
+
+    font-weight: 700;
+    /* thay vì 900 */
+    font-size: 1rem;
+    /* thêm để dễ thấy */
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+
+}
+
+.close-dialog {
+    background-color: white;
+    color: #3B82F6;
+}
+
+.save-book {
+    background-color: #3B82F6;
+    color: white;
+}
+
+#add-dialog>form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-container {
+    grid-row: 2;
+    grid-column: 2;
+    margin: 2rem;
+    display: grid;
+    justify-content: center;
+    width: 80vw;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    gap: 10px;
+}
+
+hr {
+    width: 80%;
+    justify-self: center;
+    opacity: 50%;
+}
+
+.title {
+    margin-top: 1rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.card>*:not(hr):not(.card-buttons) {
+    margin-left: 10px;
+
+}
+
+.card-buttons {
+
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+    gap: 2rem;
+    width: 100%;
+}
+
+.card-buttons>* {
+    width: 40%;
+    height: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    overflow: hidden;
+    appearance: none;
+    cursor: pointer;
+}
+
+.green-button {
+    color: white;
+    background-color: #3FA836;
+}
+.yellow-button {
+    color: white;
+    background-color: #f4a924;
+}
