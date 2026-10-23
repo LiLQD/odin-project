@@ -1,0 +1,226 @@
+/* ── Reset & Base ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #f0f0ed;
+  --color-panel: #ffffff;
+  --color-border: #d8d8d4;
+  --color-accent: #2a52be;
+  --color-text: #1a1a1a;
+  --color-muted: #6b6b6b;
+  --color-label: #3a3a3a;
+  --color-input-bg: #fafaf8;
+  --color-input-focus: #2a52be22;
+
+  --font-editor: "Inter", "Segoe UI", sans-serif;
+  --font-resume-heading: "Georgia", "Times New Roman", serif;
+  --font-resume-body: "Arial", "Helvetica Neue", sans-serif;
+
+  --radius: 6px;
+  --gap: 1.5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-editor);
+  min-height: 100vh;
+}
+
+/* ── App Layout (side by side) ────────────────────────────── */
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ── Editor Panel (left) ──────────────────────────────────── */
+.editor {
+  background: var(--color-panel);
+  border-right: 1px solid var(--color-border);
+  padding: var(--gap);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* ── Input Place (section block) ─────────────────────────── */
+.input-place {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-place__title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.4rem;
+}
+
+/* ── Input Field ──────────────────────────────────────────── */
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.input-field__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-label);
+}
+
+.input-field__control {
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: var(--font-editor);
+  font-size: 0.875rem;
+  padding: 0.45rem 0.65rem;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+  width: 100%;
+}
+
+.input-field__control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-input-focus);
+  outline: none;
+}
+
+textarea.input-field__control {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ── Resume Panel (right) ─────────────────────────────────── */
+.resume {
+  background: var(--color-bg);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  overflow-y: auto;
+}
+
+/* ── Resume Paper ─────────────────────────────────────────── */
+.resume__paper {
+  background: #ffffff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 680px;
+  min-height: 900px;
+  padding: 3rem 3.5rem;
+  font-family: var(--font-resume-body);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #111111;
+}
+
+/* ── Resume Header ────────────────────────────────────────── */
+.resume__header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #111111;
+}
+
+.resume__name {
+  font-family: var(--font-resume-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.resume__contact {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #444444;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume__contact span:not(:last-child)::after {
+  content: "·";
+  margin-left: 1rem;
+}
+
+/* ── Resume Section ───────────────────────────────────────── */
+.resume__section {
+  margin-bottom: 1.25rem;
+}
+
+.resume__section-title {
+  font-family: var(--font-resume-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #111111;
+  border-bottom: 1px solid #111111;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Resume Entry ─────────────────────────────────────────── */
+.resume__entry {
+  margin-bottom: 0.75rem;
+}
+
+.resume__entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.resume__entry-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.resume__entry-date {
+  font-size: 0.8rem;
+  color: #555555;
+  white-space: nowrap;
+}
+
+.resume__entry-subtitle {
+  font-style: italic;
+  font-size: 0.825rem;
+  color: #444444;
+}
+
+.resume__entry-body {
+  margin-top: 0.25rem;
+  font-size: 0.825rem;
+  color: #333333;
+}
+
+/* ── Placeholder text (empty state) ──────────────────────── */
+.resume__placeholder {
+  color: #bbbbbb;
+  font-style: italic;
+}
