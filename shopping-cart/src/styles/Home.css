@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=MedievalSharp&display=swap");
+
+.home {
+  font-family: "Cinzel", serif;
+  background-color: #12100d;
+  color: #e8d9b5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.home-main {
+  flex: 1 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(180deg, #2b1d12, #1a120b);
+  border-bottom: 3px double #c9a227;
+}
+
+.navbar-brand {
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.5rem;
+  color: #c9a227;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #e8d9b5;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #c9a227;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) saturate(1.1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-overlay h1 {
+  font-family: "MedievalSharp", cursive;
+  font-size: 3rem;
+  color: #f2d98d;
+  text-shadow: 2px 2px 6px #000;
+  margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+  padding: 0.75rem 1.75rem;
+  border: 2px solid #c9a227;
+  border-radius: 4px;
+  color: #c9a227;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero-cta:hover {
+  background: #c9a227;
+  color: #1a120b;
+}
+
+.categories {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.categories h2 {
+  font-family: "MedievalSharp", cursive;
+  color: #c9a227;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.25rem;
+  background: #1a120b;
+  border-top: 3px double #c9a227;
+  font-size: 0.85rem;
+  color: #a3906a;
+}
