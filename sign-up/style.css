@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: NorseBold;
+  src: url("fonts/Norsebold.woff2");
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(246, 246, 246);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 50px;
+}
+
+.left-side {
+  flex: 0 0 30%;
+  height: auto;
+  width: auto;
+  background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 5rem;
+  color: white;
+  background-color: rgb(0, 0, 0, .5);
+
+  font-family: NorseBold;
+}
+
+.logo>img {
+  flex: 0 0 10%;
+  width: 150px;
+}
+
+/* introduce */
+.right-side>* {
+  margin-left: 100px;
+
+}
+
+/* sign up */
+.sign-up-form-container {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  margin-left: 0;
+  align-items: center;
+  font-weight: bold;
+}
+
+#sign-up-form {
+  margin-left: 100px;
+  padding: 30px 0px;
+}
+
+#sign-up-form>* {
+  display: flex;
+  gap: 50px;
+  margin: 15px 0;
+}
+
+#sign-up-form input{
+  appearance: none;
+  border: solid 1px #E5E7EB;
+  
+}
+#sign-up-form input:focus{
+  border: solid #5378df 3px;
+  box-shadow: 0.8px 1.6px 1.6px hsl(0deg 0% 0% / 0.48);
+  
+}
+#pwd:invalid,
+#confirm-pwd:invalid{
+  border: solid red 1px;
+}
+
+/* buttons */
+.bottom-button {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.create-account {
+  background-color: #596D48;
+  width: 12rem;
+  height: 3rem;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  appearance: none;
+  margin-bottom: 25px;
+}
+
+.log-in {
+  color: #596D48;
+  background: transparent;
+  border: none;
+
+}
+
+.log-in:hover {
+  cursor: pointer;
+}
+.log-in:active {
+  
+}

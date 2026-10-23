@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left-side">
+            <div class="logo">
+                <img src="odin-lined.png" alt="">
+                <span>ODIN</span>
+            </div>
+        </div>
+
+        <div class="right-side">
+
+            <div class="introduce">
+                <h2>This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams.
+                    <br> Sign up now to get started
+                </h2>
+                <br>
+                <h2>You <i>know</i> you want to</h2>
+            </div>
+
+            <div class="sign-up-form-container">
+                <form action="" method="get" id="sign-up-form">
+                    <h2>Let's do this!</h2>
+                    <div class="first-row">
+                        <div class="form-row">
+                            <div><label for="first-name">FIRST NAME</label></div>
+                            <input type="text" name="firstName" id="first-name" minlength="4" maxlength="30" required>
+                        </div>
+                        <div class="form-row">
+                            <div><label for="last-name">LAST NAME</label></div>
+                            <input type="text" name="lastName" id="last-name" minlength="4" maxlength="30" required>
+                        </div>
+                    </div>
+
+                    <div class="second-row">
+                        <div class="form-row">
+                            <div><label for="email">EMAIL</label></div>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="form-row">
+                            <div><label for="phone-number">PHONE NUMBER</label></div>
+                            <input type="tel" name="phoneNumber" id="phone-number"
+                                pattern="/^[\+]?[0-9]{0,3}\W?+[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="third-row">
+                        <div class="form-row">
+                            <div><label for="pwd">PASSWORD</label></div>
+                            <input type="password" name="password" id="pwd" minlength="6" maxlength="30" required>
+                        </div>
+                        <div class="form-row">
+                            <div><label for="confirm-pwd">CONFIRM PASSWORD</label></div>
+                            <input type="password" name="confirmPassword" id="confirm-pwd" minlength="6" maxlength="20"
+                                required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-button">
+                <button type="submit" form="sign-up-form" class="create-account">Create Account</button>
+                <div>
+                    <span>Already have an account?</span>
+                    <button type="button" class="log-in">Log in</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>
