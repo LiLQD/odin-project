@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 class="heading">My Books Collection</h1>
+    <div class="content">
+        <button id="add-btn">+ Add New Book</button>
+        <dialog id="add-dialog">
+            <h2>Add Book To Your Library</h2>
+            <form action="" method="dialog" class="add-form">
+                <div class="title-form">
+                    <input type="text" name="title" id="title_input" autofocus required placeholder="Title" minlength="1">
+                </div>
+                <div class="author-form">
+                    <input type="text" name="author" id="author_input" required placeholder="Author" minlength="1">
+                </div>
+                <div class="pages-form">
+                    <input type="number" name="pages" id="pages_input" required placeholder="Pages number" min="1" step="1" >
+                </div>
+                <div class="read-form">
+                    <label for="read_input">I already read this:</label>
+                    <input type="checkbox" name="Read" id="read_input">
+                </div>
+
+            </form>
+            <div class="dialog-buttons">
+                <button class="close-dialog">Close</button>
+                <button class="save-book">Save</button>
+            </div>
+        </dialog>
+        <div class="card-container">
+            <!-- <div class="card">
+                <p class="title">Book's Title</p>
+                <hr>
+                <p class="author">Author: Book's Author</p>
+                <p class="pages">Pages: 100</p>
+                <p class="read">Read: </p>
+                <hr>
+                <div class="card-buttons">
+                    <button class="remove">Remove</button>
+                    <button class="read-check green-button">Mark as Read</button>
+                </div>
+            </div>
+            <div class="card">
+                <p class="title">Book's Title</p>
+                <hr>
+                <p class="author">Author: Book's Author</p>
+                <p class="pages">Pages: 100</p>
+                <p class="read">Read: </p>
+                <hr>
+                <div class="card-buttons">
+                    <button class="remove">Remove</button>
+                    <button class="read-check green-button" >Mark as Read</button>
+                </div>
+            </div>
+            <div class="card">
+                <p class="title">Book's Title</p>
+                <hr>
+                <p class="author">Author: Book's Author</p>
+                <p class="pages">Pages: 100</p>
+                <p class="read">Read: </p>
+                <hr>
+                <div class="card-buttons">
+                    <button class="remove">Remove</button>
+                    <button class="read-check green-button">Mark as Read</button>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
