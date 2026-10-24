@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "es2022"
+  },
+  "include": ["**/*.js"],
+  "exclude": ["node_modules"]
+}
